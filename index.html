@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <title>Творчо Обдаровані Фімляни - ТОФ</title>
+  </head>
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    article,
+    aside,
+    figcaption,
+    figure,
+    footer,
+    header,
+    hgroup,
+    main,
+    nav,
+    section {
+      display: block;
+    }
+
+    .slides {
+      width: 100%;
+    }
+
+    .slide-contents {
+      position: relative;
+    }
+
+    .contents {
+      position: absolute;
+      top: 100px;
+      left: 830px;
+      width: 420px;
+      font-family: "Merriweather", serif;
+      color: #ffffff;
+    }
+
+    .contents h2 {
+      font-size: 36px;
+      font-weight: 700;
+      margin: 0 0 24px 0;
+    }
+
+    .contents ul {
+      list-style: disc;
+      margin: 0;
+      padding: 0;
+    }
+
+    .contents li {
+      font-size: 20px;
+      line-height: 1.45;
+      margin-bottom: 12px;
+    }
+
+    .contents a {
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    .contents a:hover {
+      text-decoration: underline;
+    }
+
+    .slides img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a:visited {
+      color: #ffffff;
+    }
+
+    #slide2 {
+      position: relative;
+    }
+
+    #slide2 .contents {
+      position: absolute;
+      top: 9%;
+      left: 43.8%;
+      width: 30.8%;
+
+      font-family: "Merriweather", serif;
+      color: #ffffff;
+    }
+
+    #slide2 .contents li {
+      line-height: 1.45;
+    }
+
+    #slide2 .contents h2 {
+      font-size: clamp(20px, 5vw, 36px);
+    }
+
+    @media (max-width: 1270px) {
+      #slide2 .contents li {
+        font-size: 17.5px;
+        line-height: 1.4;
+      }
+    }
+    @media (max-width: 1230px) {
+      #slide2 .contents li {
+        font-size: 17px;
+        line-height: 1.38;
+      }
+    }
+    @media (max-width: 1190px) {
+      #slide2 .contents li {
+        font-size: 16.5px;
+        line-height: 1.36;
+      }
+    }
+    @media (max-width: 1150px) {
+      #slide2 .contents li {
+        font-size: 16px;
+        line-height: 1.34;
+      }
+    }
+    @media (max-width: 1110px) {
+      #slide2 .contents li {
+        font-size: 15.5px;
+        line-height: 1.32;
+      }
+    }
+    @media (max-width: 1070px) {
+      #slide2 .contents li {
+        font-size: 15px;
+        line-height: 1.3;
+      }
+    }
+    @media (max-width: 1030px) {
+      #slide2 .contents li {
+        font-size: 14.5px;
+        line-height: 1.28;
+      }
+    }
+    @media (max-width: 990px) {
+      #slide2 .contents li {
+        font-size: 14px;
+        line-height: 1.26;
+      }
+    }
+    @media (max-width: 950px) {
+      #slide2 .contents li {
+        font-size: 13.5px;
+        line-height: 1.24;
+      }
+    }
+    @media (max-width: 910px) {
+      #slide2 .contents li {
+        font-size: 13px;
+        line-height: 1.22;
+      }
+    }
+    @media (max-width: 870px) {
+      #slide2 .contents li {
+        font-size: 12.5px;
+        line-height: 1.2;
+      }
+    }
+    @media (max-width: 830px) {
+      #slide2 .contents li {
+        font-size: 12px;
+        line-height: 1.1;
+      }
+    }
+    @media (max-width: 795px) {
+      #slide2 .contents li {
+        font-size: 11.5px;
+        line-height: 1;
+      }
+    }
+    @media (max-width: 760px) {
+      #slide2 .contents li {
+        font-size: 11px;
+        line-height: 0.9;
+      }
+    }
+    @media (max-width: 720px) {
+      #slide2 .contents li {
+        font-size: 10.5px;
+        line-height: 0.8;
+      }
+    }
+    @media (max-width: 680px) {
+      #slide2 .contents li {
+        font-size: 10px;
+        line-height: 0.7;
+      }
+    }
+    @media (max-width: 640px) {
+      #slide2 .contents li {
+        font-size: 9.5px;
+        line-height: 0.7;
+      }
+    }
+    @media (max-width: 600px) {
+      #slide2 .contents li {
+        font-size: 9px;
+        line-height: 0.6;
+      }
+    }
+    @media (max-width: 560px) {
+      #slide2 .contents li {
+        font-size: 8.5px;
+        line-height: 0.5;
+      }
+    }
+    @media (max-width: 520px) {
+      #slide2 .contents li {
+        font-size: 8;
+        line-height: 0.4;
+      }
+    }
+    @media (max-width: 480px) {
+      #slide2 .contents li {
+        font-size: 7.5px;
+        line-height: 0.3;
+      }
+    }
+    @media (max-width: 440px) {
+      #slide2 .contents li {
+        font-size: 7px;
+        line-height: 0.2;
+      }
+    }
+    @media (max-width: 400px) {
+      #slide2 .contents li {
+        font-size: 5px;
+        line-height: 0.1;
+      }
+    }
+    @media (max-width: 360px) {
+      #slide2 .contents li {
+        font-size: 4px;
+        line-height: 0;
+      }
+    }
+
+    .footer-style {
+      height: 215px;
+      display: -webkit-box;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      flex-direction: column;
+      background: #555555;
+      padding: 20px 0;
+      margin-top: 50px;
+      color: white;
+      box-shadow: 0 20px 20px -20px black;
+      margin-top: 0;
+    }
+
+    @media (max-width: 670px) {
+      .footer-style {
+        height: 310px;
+      }
+    }
+
+    .footer-content {
+      justify-content: space-around;
+      display: -webkit-box;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      flex-direction: row;
+      -webkit-box-align: center;
+      align-items: center;
+    }
+
+    @media (max-width: 670px) {
+      .footer-content {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        flex-direction: column;
+      }
+    }
+
+    .footer-block__field-socials {
+      display: -webkit-box;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      flex-direction: row;
+    }
+
+    .footer-block__field-socials .field__item {
+      margin-right: 25px;
+    }
+
+    .footer-social-links-item {
+      width: 100%;
+      height: 100%;
+    }
+
+    .footer-social-links-item a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      color: transparent;
+      -webkit-transition: 0.3s;
+      transition: 0.3s;
+    }
+
+    .footer-social-links-wrapper {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      -webkit-transition: 0.3s;
+      transition: 0.3s;
+    }
+
+    @media (max-width: 992px) {
+      .footer-social-links-wrapper {
+        width: 60px;
+        height: 60px;
+      }
+    }
+
+    .footer-social-links-wrapper:hover {
+      -webkit-transform: scale(1.05) rotate(-10deg);
+      transform: scale(1.05) rotate(-10deg);
+      box-shadow: 0 2px 5px black;
+    }
+
+    @media (max-width: 670px) {
+      .footer-social-links {
+        margin-bottom: 35px;
+      }
+    }
+
+    .footer-block__field-contacts {
+      font-size: 15px;
+    }
+
+    .footer-block__field-contacts .field__item .paragraph--type--contacts {
+      display: -webkit-box;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      flex-direction: row;
+    }
+
+    .contacts__field-icon {
+      margin-top: 8px;
+    }
+
+    .img-fluid {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .visually-hidden {
+      position: absolute !important;
+      width: 1px !important;
+      height: 1px !important;
+      padding: 0 !important;
+      margin: -1px !important;
+      overflow: hidden !important;
+      clip: rect(0, 0, 0, 0) !important;
+      border: 0 !important;
+    }
+  </style>
+
+  <body>
+    <main class="slides">
+      <img
+        id="slide1"
+        src="assets/slides/slide1.png"
+        alt="Титул - Творчо Обдаровані Фімляни"
+      />
+      <div class="slide slide-contents" id="slide2">
+        <img src="assets/slides/slide2.png" alt="Зміст" />
+        <nav class="contents">
+          <ul>
+            <li><a href="#slide3">1 — Біленко Вікторія</a></li>
+            <li><a href="#slide5">2 — Петрова Аліса</a></li>
+            <li><a href="#slide10">3 — Алкан Кая Демірель</a></li>
+            <li><a href="#slide13">4 — Куценко Соня</a></li>
+            <li><a href="#slide15">5 — Артеменко Діана</a></li>
+            <li><a href="#slide17">6 — Куценко Софія</a></li>
+            <li><a href="#slide26">7 — Швець Анастасія</a></li>
+            <li><a href="#slide28">8 — Попов Захарій</a></li>
+            <li><a href="#slide30">9 — Шершень Анна</a></li>
+            <li><a href="#slide31">10 — Плосконос Софія</a></li>
+            <li><a href="#slide35">11 — Мостова Софія</a></li>
+            <li><a href="#slide40">12 — Ігнатко Анна</a></li>
+            <li><a href="#slide42">13 — Нестерко Ксенія</a></li>
+            <li><a href="#slide47">14 — Довгий Олександр</a></li>
+            <li><a href="#slide50">15 — Кабанюк Дмитро</a></li>
+            <li><a href="#slide53">16 — Савінов Богдан</a></li>
+          </ul>
+        </nav>
+      </div>
+      <img id="slide3" src="assets/slides/slide3.png" alt="Біленко Вікторія" />
+      <img id="slide4" src="assets/slides/slide4.png" alt="Петрова Аліса" />
+      <img
+        id="slide5"
+        src="assets/slides/slide5.png"
+        alt="Допоки серце вірить / Отрута почуттів"
+      />
+      <img id="slide6" src="assets/slides/slide6.png" alt="Четвертий рік" />
+      <img
+        id="slide7"
+        src="assets/slides/slide7.png"
+        alt="Хто я і звідки? (1/2)"
+      />
+      <img
+        id="slide8"
+        src="assets/slides/slide8.png"
+        alt="Хто я і звідки? (2/2)"
+      />
+      <img
+        id="slide9"
+        src="assets/slides/slide9.png"
+        alt="Послухати автора - Петрова Аліса"
+      />
+      <img
+        id="slide10"
+        src="assets/slides/slide10.png"
+        alt="Алкан Кая Демірель"
+      />
+      <img
+        id="slide11"
+        src="assets/slides/slide11.png"
+        alt="Коли закінчиться війна..."
+      />
+      <img id="slide12" src="assets/slides/slide12.png" alt="Сон" />
+      <img id="slide13" src="assets/slides/slide13.png" alt="Куценко Соня" />
+      <img id="slide14" src="assets/slides/slide14.png" alt="Оберіг" />
+      <img id="slide15" src="assets/slides/slide15.png" alt="Артеменко Діана" />
+      <img id="slide16" src="assets/slides/slide16.png" alt="1933 & 2025" />
+      <img id="slide17" src="assets/slides/slide17.png" alt="Куценко Софія" />
+      <img
+        id="slide18"
+        src="assets/slides/slide18.png"
+        alt="Якось я побачила чоловіка..."
+      />
+      <img id="slide19" src="assets/slides/slide19.png" alt="Янгол у кишені" />
+      <img id="slide20" src="assets/slides/slide20.png" alt="Жінка є всюди" />
+      <img
+        id="slide21"
+        src="assets/slides/slide21.png"
+        alt="На обрії / Моя Афродіта ХХІ століття"
+      />
+      <img
+        id="slide22"
+        src="assets/slides/slide22.png"
+        alt="Червоні лілії / Вона пахне, як рання осінь"
+      />
+      <img id="slide23" src="assets/slides/slide23.png" alt="То твої очі" />
+      <img
+        id="slide24"
+        src="assets/slides/slide24.png"
+        alt="Від великої любові..."
+      />
+      <img
+        id="slide25"
+        src="assets/slides/slide25.png"
+        alt="Послухати автора - Куценко Софія"
+      />
+      <img id="slide26" src="assets/slides/slide26.png" alt="Швець Анaстасія" />
+      <img
+        id="slide27"
+        src="assets/slides/slide27.png"
+        alt="Зливаючись із небесами..."
+      />
+      <img id="slide28" src="assets/slides/slide28.png" alt="Попов Захaрій" />
+      <img id="slide29" src="assets/slides/slide29.png" alt="Обрiй сили" />
+      <img
+        id="slide30"
+        src="assets/slides/slide30.png"
+        alt="Шершень Анна - Щастя"
+      />
+      <img id="slide31" src="assets/slides/slide31.png" alt="Плосконос Софія" />
+      <img
+        id="slide32"
+        src="assets/slides/slide32.png"
+        alt="Музична скринька (1/3)"
+      />
+      <img
+        id="slide33"
+        src="assets/slides/slide33.png"
+        alt="Музична скринька (2/3)"
+      />
+      <img
+        id="slide34"
+        src="assets/slides/slide34.png"
+        alt="Музична скринька (3/3)"
+      />
+      <img id="slide35" src="assets/slides/slide35.png" alt="Мостова Софія" />
+      <img id="slide36" src="assets/slides/slide36.png" alt="Лід (1/4)" />
+      <img id="slide37" src="assets/slides/slide37.png" alt="Лід (2/4)" />
+      <img id="slide38" src="assets/slides/slide38.png" alt="Лід (3/4)" />
+      <img id="slide39" src="assets/slides/slide39.png" alt="Лід (4/4)" />
+      <img id="slide40" src="assets/slides/slide40.png" alt="Ігнатко Анна" />
+      <img id="slide41" src="assets/slides/slide41.png" alt="Птахи" />
+      <img id="slide42" src="assets/slides/slide42.png" alt="Нестерко Ксенія" />
+      <img
+        id="slide43"
+        src="assets/slides/slide43.png"
+        alt="Джерело стійкості (1/4)"
+      />
+      <img
+        id="slide44"
+        src="assets/slides/slide44.png"
+        alt="Джерело стійкості (2/4)"
+      />
+      <img
+        id="slide45"
+        src="assets/slides/slide45.png"
+        alt="Джерело стійкості (3/4)"
+      />
+      <img
+        id="slide46"
+        src="assets/slides/slide46.png"
+        alt="Джерело стійкості (4/4)"
+      />
+      <img
+        id="slide47"
+        src="assets/slides/slide47.png"
+        alt="Довгий Олександр"
+      />
+      <img
+        id="slide48"
+        src="assets/slides/slide48.png"
+        alt="Операція Вавилон (1/2)"
+      />
+      <img
+        id="slide49"
+        src="assets/slides/slide49.png"
+        alt="Операція Вавилон (2/2)"
+      />
+      <img id="slide50" src="assets/slides/slide50.png" alt="Кабанюк Дмитро" />
+      <img
+        id="slide51"
+        src="assets/slides/slide51.png"
+        alt="Джерела моєї стійкості (1/2)"
+      />
+      <img
+        id="slide52"
+        src="assets/slides/slide52.png"
+        alt="Джерела моєї стійкості (2/2)"
+      />
+      <img id="slide53" src="assets/slides/slide53.png" alt="Савінов Богдан" />
+      <img id="slide54" src="assets/slides/slide54.png" alt="З безодні (1/3)" />
+      <img id="slide55" src="assets/slides/slide55.png" alt="З безодні (2/3)" />
+      <img id="slide56" src="assets/slides/slide56.png" alt="З безодні (3/3)" />
+      <img id="slide57" src="assets/slides/slide57.png" alt="QR - коди" />
+      <img
+        id="slide58"
+        src="assets/slides/slide58.png"
+        alt="Послухати автора - Куценко Софія"
+      />
+      <img
+        id="slide59"
+        src="assets/slides/slide59.png"
+        alt="Цитата - за Дж. Р. Р. Толкіном"
+      />
+      <img id="slide60" src="assets/slides/slide60.png" alt="Кінець" />
+    </main>
+    <footer class="footer-style">
+      <div class="footer-content">
+        <div class="footer-social-links">
+          <div class="footer-block__field-socials">
+            <div class="field__item">
+              <section
+                class="footer-social-links-wrapper"
+                style="
+                  background: url('assets/facebook.png') no-repeat center
+                    top/cover;
+                "
+              >
+                <div class="footer-social-links-item">
+                  <a
+                    href="https://www.facebook.com/CherkasyPhymly/"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    Facebook
+                  </a>
+                </div>
+              </section>
+            </div>
+
+            <div class="field__item">
+              <section
+                class="footer-social-links-wrapper"
+                style="
+                  background: url('assets/instagram.png') no-repeat center
+                    top/cover;
+                "
+              >
+                <div class="footer-social-links-item">
+                  <a
+                    href="https://www.instagram.com/phymly/"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    Instagram
+                  </a>
+                </div>
+              </section>
+            </div>
+
+            <div class="field__item">
+              <section
+                class="footer-social-links-wrapper"
+                style="
+                  background: url('assets/youtube.png') no-repeat center
+                    top/cover;
+                "
+              >
+                <div class="footer-social-links-item">
+                  <a
+                    href="https://www.youtube.com/@phymlyibidem946"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    Youtube
+                  </a>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-block__field-contacts">
+            <div class="field__item">
+              <div
+                class="paragraph paragraph--type--contacts paragraph--view-mode--default"
+              >
+                <div class="contacts__field-icon">
+                  <article>
+                    <div class="image__field-media-image">
+                      <div
+                        class="field__label font-weight-bold visually-hidden"
+                      >
+                        Image
+                      </div>
+                      <div class="field__item">
+                        <img
+                          src="assets/map-marker.png?itok=hXrFZgNA"
+                          width="24"
+                          height="24"
+                          typeof="foaf:Image"
+                          class="img-fluid"
+                          alt="map"
+                        />
+                      </div>
+                    </div>
+                  </article>
+                </div>
+
+                <div class="contacts__field-contact-text">
+                  <p>м.Черкаси, вул.Благовісна, 280</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="field__item">
+              <div
+                class="paragraph paragraph--type--contacts paragraph--view-mode--default"
+              >
+                <div class="contacts__field-contact-text">
+                  <p>
+                    <strong>&nbsp;Електронна адреса:</strong>
+                    phymly@gmail.com
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="field__item">
+              <div
+                class="paragraph paragraph--type--contacts paragraph--view-mode--default"
+              >
+                <div class="contacts__field-icon">
+                  <article>
+                    <div class="image__field-media-image">
+                      <div
+                        class="field__label font-weight-bold visually-hidden"
+                      >
+                        Image
+                      </div>
+                      <div class="field__item">
+                        <img
+                          src="assets/phone.png?itok=c5POgni3"
+                          width="24"
+                          height="24"
+                          typeof="foaf:Image"
+                          class="img-fluid"
+                          alt="phone"
+                        />
+                      </div>
+                    </div>
+                  </article>
+                </div>
+
+                <div class="contacts__field-contact-text">
+                  <p>
+                    Директор, секретар:&nbsp;&nbsp;
+                    <strong>(0472) 31-43-95</strong>
+                  </p>
+
+                  <p>
+                    Адміністрація, чергова:&nbsp;
+                    <strong>(0472) 31-32-25</strong>
+                  </p>
+
+                  <p>
+                    Бухгалтерія:&nbsp;
+                    <strong>(0472) 50-06-61</strong>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="block block--basic block--googlemap">
+        <div class="basic__body">
+          <div>
+            <iframe
+              allowfullscreen=""
+              frameborder="0"
+              height="450"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2594.9313023156483!2d32.07389601569469!3d49.42911277934754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d14ba1ca32d827%3A0x795b28b003abc6fb!2z0KfQldCg0JrQkNCh0KHQmtCY0Jkg0KTQmNCX0JjQmtCeLdCc0JDQotCV0JzQkNCi0JjQp9CV0KHQmtCY0Jkg0JvQmNCm0JXQmQ!5e0!3m2!1suk!2sua!4v1584287558833!5m2!1suk!2sua"
+              style="border: 0"
+              width="100%"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
